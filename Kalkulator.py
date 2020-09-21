@@ -1,6 +1,6 @@
-def add(v1, v2):
-    return 0
-
+def add(a, b):
+    c = a + b
+    return "%s + %s = %s"%(int(a), int(b), int(c))
 
 def subtract(v1, v2):
     return 0
@@ -24,7 +24,7 @@ def main():
           "4 = division")
     operasi = int(input(">> "))
     if operasi == 1:
-        add(v1, v2)
+        print(add(v1, v2))
     elif operasi == 2:
         subtract(v1, v2)
     elif operasi == 3:
