@@ -2,10 +2,10 @@ def add(a, b):
     c = a + b
     return "%s + %s = %s"%(int(a), int(b), int(c))
 
-def subtract(v1, v2):
-    return 0
-
-
+def subtract(a, b):
+    c = a - b
+    print(a,"-", b,"=",c)
+    
 def multiplication(v1, v2):
     return 0
 
@@ -33,7 +33,12 @@ def main():
         division(v1, v2)
     else:
         print(f"Tidak ada pilihan {operasi} didalam kalkulator ini")
-
+        
+    option = input("Gunakan lagi? [y/n] ")
+    if option == "y":
+        main()
+    else:
+        print("Selesai")
 
 if __name__ == '__main__':
     main()
