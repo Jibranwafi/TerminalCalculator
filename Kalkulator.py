@@ -1,3 +1,6 @@
+
+
+
 def add(a, b):
     c = a + b
     return "%s + %s = %s"%(int(a), int(b), int(c))
@@ -5,11 +8,12 @@ def add(a, b):
 def subtract(a, b):
     c = a - b
     print(a,"-", b,"=",c)
+''' 
+def multiplication(a, b):
+    c = int(a)*int(b) 
+    print (a, "*", b, "=", c)
+'''
     
-def multiplication(v1, v2):
-    return 0
-
-
 def division(v1, v2):
     return 0
 
@@ -27,8 +31,22 @@ def main():
         print(add(v1, v2))
     elif operasi == 2:
         subtract(v1, v2)
+        
     elif operasi == 3:
-        multiplication(v1, v2)
+        c = int(v1)*int(v2)
+        print(f"{v1}*{v2}={c}")
+        while c:
+            am = input("kali lagi? [y/n]")
+            if am == "y":
+                var = int(input("variable = "))
+                c *= var
+                print(f"{v1}*{v2} = {c}")
+            elif am == "n":
+                return main()
+            else:
+                print("error")
+                break
+        
     elif operasi == 4:
         division(v1, v2)
     else:
